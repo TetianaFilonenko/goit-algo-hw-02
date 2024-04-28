@@ -17,7 +17,10 @@ def process_request():
 
 
 counter = 0
-while True:
-    generate_request(counter)
-    process_request()
-    counter += 1
+try:
+    while True:
+        generate_request(counter)
+        process_request()
+        counter += 1
+except KeyboardInterrupt:
+    print("Program has been manually stopped by the user.")
